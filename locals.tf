@@ -36,7 +36,7 @@ locals {
   db_name                = "${var.name_prefix}postrgesql"
   db_user                = "${var.name_prefix}admin"
   db_security_group      = "${var.name_prefix}-db-sg"
-  db_password            = "test1234"
+  db_password            = random_password.db_password.min_lower
   db_subnet_group_name   = "${var.name_prefix}-db-subnet-group"
 
   #redis

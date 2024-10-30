@@ -54,7 +54,7 @@ module "dbPostgreSQL" {
 
 resource "random_password" "db_password" {
   length  = 16   # Password length (adjust as needed)
-  special = true # Include special characters
+  special = false # Include special characters
   upper   = true # Include uppercase letters
   lower   = true # Include lowercase letters
   numeric = true # Include numbers
