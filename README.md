@@ -2,6 +2,9 @@
 
 # Kutt URL Shortener Infrastructure
 
+![image](https://github.com/user-attachments/assets/b31c6be3-ee11-432f-8e54-64a86fbeaa80)
+
+
 This repository contains Terraform configurations for deploying Kutt URL shortener on AWS, utilizing ECS Fargate, PostgreSQL RDS, and Redis ElastiCache.
 
 ## Architecture Overview
