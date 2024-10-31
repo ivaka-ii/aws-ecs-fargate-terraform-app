@@ -60,7 +60,15 @@ resource "aws_ecs_task_definition" "kutt_application_task" {
                 "name": "NODE_ENV",
                 "value": "production"
             }
-          ]
+          ],
+          "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/kutt",
+                    "awslogs-region": "${var.aws_region}",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
       }
     ]
     DEFINITION
@@ -153,9 +161,9 @@ resource "aws_ecs_service" "kutt_app_service" {
 
 resource "aws_security_group" "service_security_group" {
   ingress {
-    from_port       = 0
-    to_port         = 0
-    protocol        = "-1"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
 

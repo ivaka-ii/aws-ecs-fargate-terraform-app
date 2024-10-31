@@ -29,10 +29,10 @@ module "ecs_fargate_cluster" {
   application_load_balancer_name = local.application_load_balancer_name
   target_group_name              = local.target_group_name
   kutt_app_service_name          = local.kutt_app_service_name
-  db_security_group_id              = local.db_security_group_id
-  redis_security_group_id           = local.redis_security_group_id
-  db_host = local.db_host
-  redis_host = local.redis_host
+  db_security_group_id           = local.db_security_group_id
+  redis_security_group_id        = local.redis_security_group_id
+  db_host                        = local.db_host
+  redis_host                     = local.redis_host
 }
 
 #create RDS instance and security group for communication with the ECS Fargate cluster
@@ -53,11 +53,11 @@ module "dbPostgreSQL" {
 }
 
 resource "random_password" "db_password" {
-  length  = 16   # Password length (adjust as needed)
+  length  = 16    # Password length (adjust as needed)
   special = false # Include special characters
-  upper   = true # Include uppercase letters
-  lower   = true # Include lowercase letters
-  numeric = true # Include numbers
+  upper   = true  # Include uppercase letters
+  lower   = true  # Include lowercase letters
+  numeric = true  # Include numbers
 }
 
 #Create Redis

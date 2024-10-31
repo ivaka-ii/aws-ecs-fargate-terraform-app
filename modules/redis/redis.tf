@@ -10,8 +10,8 @@ resource "aws_elasticache_subnet_group" "redis_private_subnet" {
 }
 
 resource "aws_elasticache_parameter_group" "redis_parameter_group" {
-  name        = "my-redis-parameter-group"  # Unique name for the parameter group
-  family      = "redis6.x"                   # Specify the family for Redis 7.x
+  name        = "my-redis-parameter-group" # Unique name for the parameter group
+  family      = "redis6.x"                 # Specify the family for Redis 7.x
   description = "Redis parameter group for Redis 6.x"
 }
 

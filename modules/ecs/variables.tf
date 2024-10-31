@@ -64,11 +64,23 @@ variable "redis_security_group_id" {
 }
 
 variable "db_host" {
-  description = "the host of Postgresql"
+  description = "the address of Postgresql"
   type        = string
 }
 
 variable "redis_host" {
   description = "the host of redis"
+  type        = string
+}
+
+variable "aws_region" {
+  description = "AWS region"
+  default     = "eu-west-1"
+  type        = string
+}
+
+variable "environment" {
+  description = "AWS region"
+  default     = "production"
   type        = string
 }
