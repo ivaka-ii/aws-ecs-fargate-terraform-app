@@ -5,7 +5,7 @@
 ![image](https://github.com/user-attachments/assets/b31c6be3-ee11-432f-8e54-64a86fbeaa80)
 
 
-This repository contains Terraform configurations for deploying Kutt URL shortener on AWS, utilizing ECS Fargate, PostgreSQL RDS, and Redis ElastiCache.
+This repository contains Terraform configurations for deploying Kutt URL(https://github.com/thedevs-network/kutt) shortener on AWS, utilizing ECS Fargate, PostgreSQL RDS, and Redis ElastiCache.
 
 ## Architecture Overview
 
@@ -22,7 +22,7 @@ The infrastructure consists of the following components:
 - AWS CLI configured with appropriate credentials
 - Terraform >= 1.0.0
 - Docker (for local testing)
-- An AWS account with necessary permissions
+- An AWS account with the necessary permissions
 
 ## Infrastructure Components
 
